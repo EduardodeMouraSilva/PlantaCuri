@@ -1,85 +1,162 @@
 @charset "UTM-8";
 
 
-
 * {
-    margin: 0px;
+    margin: auto;
+    padding: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: aqua;
+:root {
+    /*
+    --cor1: #012340;
+    --cor2: #025939;
+    --cor3: #027333;
+    --cor4: #03A63C;
+    --cor5: #04D939; */
+    --cor1: #0D6107;
+    --cor2: #286124;
+    --cor3: #16AD0C;
+    --cor4: #1EE010;
+    --cor5: #5FE655; 
 }
 
+body {
+    background-color: var(--cor5);
+}
+
+
+/* Cabeçalho */
 header {
-    background-image: linear-gradient(to right, rgb(98, 236, 98), rgb(111, 111, 247));
+    background-image: linear-gradient(to top, var(--cor1), var(--cor5));
     color: white;
-    text-align: center; 
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.459);
+    padding: 10px;
+    text-align: center;
 }
 
 header > h1 {
-    padding: 30px 10px 10px 10px; 
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.342); 
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.61);
+    font-size: 2.2em;
+    padding-top: 10px;
 }
 
 header > p {
-    padding: 10px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.644);
     font-size: 1.2em;
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.308);
+    padding-top: 5px;
+    padding-bottom: 25px;
 }
 
-header > nav {
-    padding: 10px;
+nav {
     text-align: left;
+    padding-bottom: 10px;
 }
 
-header  a {
-    padding: 10px;
-    text-decoration: none;
+nav > a {
     color: white;
+    text-decoration: none;
+    padding: 15px;
     font-weight: bold;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.267);
 }
 
-header a:hover {
-    background-color: rgb(41, 156, 41);
-    color: rgb(6, 255, 6);
-    transition-duration: 0.6s;
+nav > a:hover {
+    background-color: var(--cor5);
+    color: var(--cor1);
     border-radius: 5px;
+    transition: 0.5s;
 }
 
+
+
+/* Principal */
 main {
-    background-color: white;
     max-width: 800px;
-    min-width: 300px;
+    min-width: 320px;
     margin: auto;
-    margin-top: 10px;
-    padding: 10px;
-    line-height: 1.8em;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.349);
+    padding: 20px;
+    background-color: white;
     border-radius: 10px;
-}
-
-main h1 {
-    padding: 10px 0px;
-    font-size: 2em;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.425);
 }
 
 main h2 {
-    padding: 10px 0px;
+    padding-bottom: 10px;
+}
+
+main section {
+    padding: 20px;
 }
 
 main p {
-    text-indent: 30px;
-    padding-bottom: 15px;
+    text-align: justify;
+    text-indent: 25px;
+    line-height: 1.5em;
 }
 
-footer {
-    background-color: green;
+main a {
+    color: blue;
+    text-decoration: none;
+}
+
+main a::after {
+    content: "\00a0\1F517";
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: purple;
+}
+
+main img {
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+    padding-top: 10px;
+    display: block;
+}
+
+main aside {
+    background-color: var(--cor5);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.521);
+}
+
+main aside > h3 {
     color: white;
+    background-color: var(--cor1);
+    font-weight: bold;
+    padding: 10px;
+    
+}
+
+main aside > p {
+    padding: 10px;
+}
+
+
+/* Rodapé */
+footer {
+    background-color: var(--cor1);
     text-align: center;
+    font-weight: bold;
     padding: 10px;
     margin-top: 10px;
-    margin-bottom: 0px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.349);
+    color: white;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.479);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer span {
+    padding-left: 15px;
 }
